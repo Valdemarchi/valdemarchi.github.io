@@ -1,4 +1,5 @@
 import { Phone, MapPin, Clock, Wrench, Shield, Gauge } from "lucide-react";
+import Image from "next/image";
 import CTA from "@/components/CTA";
 
 export default function AboutPage() {
@@ -7,13 +8,29 @@ export default function AboutPage() {
 
             <div className="max-w-6xl mx-auto px-6 py-16">
 
-                {/* TITLE */}
-                <h1 className="text-4xl font-bold">О нас</h1>
+                {/* TITLE + BUSINESS CARD */}
+                <div className="grid md:grid-cols-2 gap-8 items-center">
 
-                <p className="text-gray-400 mt-3 max-w-2xl">
-                    Мы занимаемся ремонтом дизельных систем Common Rail и ТНВД.
-                    Профессиональная диагностика, ремонт и гарантия на все работы.
-                </p>
+                    <div>
+                        <h1 className="text-4xl font-bold">О нас</h1>
+
+                        <p className="text-gray-400 mt-3 max-w-2xl">
+                            Мы занимаемся ремонтом дизельных систем Common Rail и ТНВД.
+                            Профессиональная диагностика, ремонт и гарантия на все работы.
+                        </p>
+                    </div>
+
+                    <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                        <Image
+                            src="/content.png"
+                            alt="Дизель Сервис Капиталка86 — визитка"
+                            width={600}
+                            height={370}
+                            className="w-full h-auto object-cover"
+                        />
+                    </div>
+
+                </div>
 
                 {/* ABOUT BLOCK */}
                 <div className="mt-10 grid md:grid-cols-3 gap-6">
